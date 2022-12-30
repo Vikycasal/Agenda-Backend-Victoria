@@ -5,7 +5,7 @@ import {
   getBill,
   getBills,
   updateBill,
-} from "../controllers/bills.controller";
+} from "../controllers/bills.controller.js";
 
 const router = Router();
 
