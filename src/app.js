@@ -2,6 +2,8 @@ import express from "express";
 import taskRoutes from "./routes/task.route.js";
 import billsRoutes from "./routes/bills.route.js";
 import calendarRoutes from "./routes/calendar.route.js";
+import notesRoutes from "./routes/notes.route.js";
+import usersRoutes from "./routes/users.route.js";
 
 const app = express();
 
@@ -16,5 +18,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(taskRoutes);
 app.use(billsRoutes);
 app.use(calendarRoutes);
+app.use(notesRoutes);
+app.use(usersRoutes);
 
 export default app;
