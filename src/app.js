@@ -14,6 +14,9 @@ app.use(express.json());
 //cuando me envien un dato a traves de un formulario, tambien la pueda entender
 app.use(express.urlencoded({ extended: false }));
 
+//de momento las rutas estan terminadas, a medida que le demos funcionalidad al front recien vamos a ir agregandole cosas al back
+//la base de datos esta perfecta y terminada y no se toca
+//y a su vez se va documenntando el codigo
 //rutas
 app.use(taskRoutes);
 app.use(billsRoutes);
