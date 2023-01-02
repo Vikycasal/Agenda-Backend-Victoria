@@ -4,6 +4,8 @@ import billsRoutes from "./routes/bills.route.js";
 import calendarRoutes from "./routes/calendar.route.js";
 import notesRoutes from "./routes/notes.route.js";
 import usersRoutes from "./routes/users.route.js";
+//librerias extras
+import cors from "cors";
 
 const app = express();
 
@@ -12,7 +14,10 @@ const app = express();
 // y lo transforma a javascript
 app.use(express.json());
 //cuando me envien un dato a traves de un formulario, tambien la pueda entender
-app.use(express.urlencoded({ extended: false }));
+app.use(
+  express.urlencoded({ limit: "50mb", extended: true, parameterLimit: 50000 })
+);
+app.use(cors());
 
 //de momento las rutas estan terminadas, a medida que le demos funcionalidad al front recien vamos a ir agregandole cosas al back
 //la base de datos esta perfecta y terminada y no se toca
